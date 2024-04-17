@@ -7,7 +7,7 @@
 
 // std::cout << std::system_category().message(hr) << '\n';
 
-int ShowFiltersInGraph(IGraphBuilder* pGraph)
+int ShowFilters(IGraphBuilder* pGraph)
 {
     std::cout << "Filter\n";
 
@@ -87,7 +87,7 @@ int main()
     std::cout << "Duration\t\t" << llDuration / 10000000.0 << "s\n";
     
     std::cout << '\n';
-    ShowFiltersInGraph(pGraph);
+    ShowFilters(pGraph);
 
     if (SUCCEEDED(hr))
     {
