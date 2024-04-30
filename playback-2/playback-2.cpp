@@ -7,7 +7,6 @@
 
 // std::cout << std::system_category().message(hr) << '\n';
 
-GUID CLSID_ActiveMovieFilterClassManager = { 0x083863F1, 0x70DE, 0x11D0, {0xBD, 0x40, 0x00, 0xA0, 0xC9, 0x11, 0xCE, 0x86} };
 GUID CLSID_LAVVideoDecoder               = { 0xEE30215D, 0x164F, 0x4A92, {0xA4, 0xEB, 0x9D, 0x4C, 0x13, 0x39, 0x0F, 0x9F} };
 GUID CLSID_LAVAudioDecoder               = { 0xE8E73B6B, 0x4CB3, 0x44A4, {0xBE, 0x99, 0x4F, 0x7B, 0xCB, 0x96, 0xE4, 0x91} };
 
@@ -117,7 +116,7 @@ int main()
     IBaseFilter* pLAVAudioDecoder = NULL;
     AddFilterByCLSID(pGraph, CLSID_LAVVideoDecoder, L"LAV Video Decoder", &pLAVVideoDecoder);
     AddFilterByCLSID(pGraph, CLSID_LAVAudioDecoder, L"LAV Audio Decoder", &pLAVAudioDecoder);
-    hr = pGraph->RenderFile(L"https://gstreamer.freedesktop.org/data/media/sintel_trailer-480p.webm", NULL);
+    hr = pGraph->RenderFile(L"D:\\resources\\Forrest_Gump_IMAX.mp4", NULL);
 
     ShowStreamInfo(pGraph);
     std::cout << '\n';
